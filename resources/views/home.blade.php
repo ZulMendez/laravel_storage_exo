@@ -15,11 +15,23 @@
                 <img width="30%" src="{{ asset('storage/img/' . $file->img) }}" alt="">
                 <p>{{$file->img}}</p>
             </div>
+            <form method="post" action="{{route('file.destroy', $file->id)}}">
+                @csrf
+                @method('DELETE')
+
+                <button class="btn btn-danger">DELETE</button>
+            </form>
         @else
             <div class="col-4">
                 <p class="text-danger"><b>Fichier de type non image</b></p>
                 <p>{{$file->img}}</p>
             </div>
+            <form method="post" action="{{route('file.destroy', $file->id)}}">
+                @csrf
+                @method('DELETE')
+
+                <button class="btn btn-danger">DELETE</button>
+            </form>
         @endif
     @endforeach
 </div>

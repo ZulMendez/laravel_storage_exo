@@ -23,7 +23,8 @@ class FichierController extends Controller
         $file->save();
         return redirect()->route('home');
     }
-    public function destroy(Fichier $file){
+    public function destroy(Fichier $id){
+        $file = $id;
         // dd($file->img)
         Storage::delete('public/img/' . $file->img);
         $file->delete();

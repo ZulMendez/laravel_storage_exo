@@ -17,6 +17,12 @@
                     <p>non image</p>
                     <p class="text-danger">{{$file->img}}</p>
                 @endif
+                <form method="post" action="{{route('file.destroy', $file->id)}}">
+                    @csrf
+                    @method('DELETE')
+
+                    <button class="btn btn-danger">DELETE</button>
+                </form>
             </div>
         @endforeach
     </div>
