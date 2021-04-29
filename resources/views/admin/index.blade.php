@@ -23,6 +23,7 @@
 
                     <button class="btn btn-danger">DELETE</button>
                 </form>
+                <a class="btn btn-success" href="{{route('file.edit', $file->id)}}">EDIT</a>
             </div>
         @endforeach
     </div>

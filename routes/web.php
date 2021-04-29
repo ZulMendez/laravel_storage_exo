@@ -27,3 +27,6 @@ Route::get('/admin/fichier/create', [FichierController::class, 'create'])->name(
 Route::post('/admin/fichier/store', [FichierController::class, 'store'])->name('file.store');
 
 Route::delete('/admin/fichier/{id}/delete', [FichierController::class, 'destroy'])->name('file.destroy');
+
+Route::get('/admin/fichier/{id}/edit', [FichierController::class, 'edit'])->name('file.edit');
+Route::put('/admin/fichier/{id}/update', [FichierController::class, 'update'])->name('file.update');
