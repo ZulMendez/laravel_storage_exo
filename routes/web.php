@@ -30,3 +30,5 @@ Route::delete('/admin/fichier/{id}/delete', [FichierController::class, 'destroy'
 
 Route::get('/admin/fichier/{id}/edit', [FichierController::class, 'edit'])->name('file.edit');
 Route::put('/admin/fichier/{id}/update', [FichierController::class, 'update'])->name('file.update');
+
+Route::get('/download/{id}', [FichierController::class, 'download'])->name('file.download');

@@ -66,4 +66,7 @@ class FichierController extends Controller
         }
         return redirect()->route('admin');
     }
+    public function download(Fichier $id){
+        return Storage::download('public/img/' . $id->img);
+    }
 }

@@ -24,6 +24,7 @@
                     <button class="btn btn-danger">DELETE</button>
                 </form>
                 <a class="btn btn-success" href="{{route('file.edit', $file->id)}}">EDIT</a>
+                <a class="btn btn-warning" href="{{route('file.download', $file->id)}}">DOWNLOAD</a>
             </div>
         @endforeach
     </div>
